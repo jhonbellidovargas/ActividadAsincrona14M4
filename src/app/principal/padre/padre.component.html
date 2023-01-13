@@ -1,0 +1,42 @@
+<section class="container p-4">
+  <h2 class="text-center">Registro personas</h2>
+  <app-hijo [data_padre]="data"></app-hijo>
+  <form>
+    <section class="form-group">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        name="nombre"
+        placeholder="Nombre"
+        [(ngModel)]="nombre"
+      />
+    </section>
+    <section class="form-group">
+      <label for="dni">Dni</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dni"
+        name="dni"
+        placeholder="Dni"
+        [(ngModel)]="dni"
+      />
+    </section>
+    <section class="form-group">
+      <label for="estado">Estado civil</label>
+      <select class="form-control" id="estado" name="estado" [(ngModel)]="estado">
+        <option value="">Seleccione</option>
+        <option value="soltero">Soltero</option>
+        <option value="casado">Casado</option>
+        <option value="viudo">Viudo</option>
+        <option value="divorciado">Divorciado</option>
+      </select>
+    </section>
+    <section class="form-group text-center">
+      <button class="btn btn-success"
+       (click)="registrar()">Registrar</button>
+    </section>
+  </form>
+</section>
